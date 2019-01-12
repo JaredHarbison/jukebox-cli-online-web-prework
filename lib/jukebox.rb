@@ -42,14 +42,13 @@ def play(songs)
     if user_request.to_i == i
     puts "playing #{songs[i-1]}"
   elsif user_request == song
-  puts "playing #{song[i]}"
+  puts "playing #{song}"
   else puts "Invalid input, please try again"
   end 
 end 
 end 
 
 def run(songs)
-  #help
   command = "" 
   while command  
   puts "Please enter a command:"
