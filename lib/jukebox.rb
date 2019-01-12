@@ -22,7 +22,6 @@ HELP
 end
 
 def play(songs)
-  puts "Please enter a song name or number:"
   user_response = gets.downcase.chomp 
   if (1..9).to_a.include?(user_response.to_i)
     puts "Playing #{songs[user_response.to_i - 1]}"
@@ -32,6 +31,7 @@ def play(songs)
     puts "Invalid input, please try again"
   end 
 end 
+
 def list(songs) 
   songs.each_with_index { |item, index|
     puts "#{index+1}. #{item}" }
