@@ -37,14 +37,18 @@ end
 
 
 def play(songs)
-  puts "Please enter a song name or number:"
-  user_request = gets.chomp
-  songs.each_with_index do |song, i|
-    if user_request.to_i == i
-    puts "playing #{songs[i-1]}"
-  elsif user_request == song 
-  puts "playing #{song[i]}"
-else puts "Invalid input, please try again"
-  end 
-end 
+  puts "Please enter a song name:"
+  user_response = gets.chomp
+  my_songs.each { |song, location|
+    if user_response == song
+      system 'open ' + location
+    end
+      }
+  if user_response == "list"
+    list(my_songs)
+    play(my_songs)
+  else
+    puts "Invalid input, please try again:"
+    play(my_songs)
+  end
 end 
