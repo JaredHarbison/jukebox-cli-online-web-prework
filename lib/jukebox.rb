@@ -27,7 +27,7 @@ def list(songs)
     puts "#{index+1}. #{item}" }
 end 
 
-
+def exit 
 
 
 
