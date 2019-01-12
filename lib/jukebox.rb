@@ -28,7 +28,6 @@ def play(songs)
     elsif songs.include?(user_response)
     puts "Playing #{user_response}"
   else 
-    puts "Invalid input, please try again"
   end 
 end 
 
