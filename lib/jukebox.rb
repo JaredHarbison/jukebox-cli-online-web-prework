@@ -32,16 +32,15 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  user_request = gets.chomp
-  songs.each_with_index do |song, i|
-    if user_request.to_i == i
-    puts "playing #{songs[i-1]}"
-  elsif user_request == song
-  puts "playing #{user_request}"
-  else puts "Invalid input, please try again"
-  end 
-end 
-end 
+  response = gets.chomp
+  if 0 < response.to_i && response.to_i < 10
+    puts "Playing #{songs[response.to_i-1]}"
+  elsif songs.include?(response)
+    puts "Playing #{response}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
 
 def run(songs)
   command = "" 
